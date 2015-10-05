@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="jgame.GRootContainer"/>
+<fullyQualifiedTypeName name="jgame.SoundManager"/>
+<fullyQualifiedTypeName name="jgame.GContainer"/>
+<fullyQualifiedTypeName name="jgame.GButton"/>
+<fullyQualifiedTypeName name="jgame.GSprite"/>
+<fullyQualifiedTypeName name="jgame.ButtonState"/>
+<fullyQualifiedTypeName name="gamesrc.TowerGame.Views"/>
+<fullyQualifiedTypeName name="jgame.listener.ButtonListener"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="jgame.controller.MouseLocationController"/>
+<fullyQualifiedTypeName name="jgame.controller.ConstantMovementController"/>
+<fullyQualifiedTypeName name="jgame.listener.BoundaryRemovalListener"/>
+<fullyQualifiedTypeName name="java.awt.Image"/>
+<fullyQualifiedTypeName name="jgame.listener.LocalClickListener"/>
+<fullyQualifiedTypeName name="jgame.listener.GlobalClickListener"/>
+<fullyQualifiedTypeName name="jgame.controller.MovementTween"/>
+<fullyQualifiedTypeName name="jgame.controller.Interpolation"/>
+<fullyQualifiedTypeName name="java.awt.Point"/>
+<fullyQualifiedTypeName name="java.awt.geom.Point2D"/>
+<fullyQualifiedTypeName name="java.awt.geom.Point2D.Double"/>
+<fullyQualifiedTypeName name="java.sql.Time"/>
+<fullyQualifiedTypeName name="java.util.Timer"/>
+<fullyQualifiedTypeName name="java.awt.Polygon"/>
+<fullyQualifiedTypeName name="jgame.controller.PolygonController"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="jgame.GAnimatable"/>
+<fullyQualifiedTypeName name="jgame.ImageCache"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="jgame.listener.TimerListener"/>
+<fullyQualifiedTypeName name="jgame.listener.HitTestListener"/>
+<fullyQualifiedTypeName name="jgame.Context"/>
+<fullyQualifiedTypeName name="jgame.listener.FrameListener"/>
+<fullyQualifiedTypeName name="jgame.GMessage"/>
+<fullyQualifiedTypeName name="jgame.GObject"/>
+</qualifiedTypeNameHistroy>

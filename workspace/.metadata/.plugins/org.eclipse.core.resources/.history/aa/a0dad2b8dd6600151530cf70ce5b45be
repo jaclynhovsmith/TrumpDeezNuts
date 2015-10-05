@@ -1,0 +1,40 @@
+package gamesrc;
+
+import java.awt.image.BufferedImage;
+
+import jgame.GAnimatable;
+import jgame.GSprite;
+
+public class Enemy extends GSprite implements GAnimatable {
+	
+
+	private int health;
+	
+	//TODO: ArrayList<BufferedImage> Constructor
+	
+	public Enemy(BufferedImage i) {
+		super(i);
+		health = 100;
+	}
+	
+	@Override
+	public boolean isPlaying() {
+		return true;
+	}
+	
+	public void takeDamage(int damage){
+		health = health-damage;
+	}
+	
+	public int getHealth() {
+		return health;
+	}
+	
+	public boolean isDead() {
+		if(health <= 0)
+			return true;
+		return false;
+	}
+	
+	
+}

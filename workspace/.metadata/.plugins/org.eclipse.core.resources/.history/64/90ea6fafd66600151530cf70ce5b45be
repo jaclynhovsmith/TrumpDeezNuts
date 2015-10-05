@@ -1,0 +1,25 @@
+package gamesrc;
+
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+
+import jgame.ImageCache;
+
+public class TurretOne extends Turret {
+	int bulletSpacing = 15;
+	public TurretOne(Image image) {
+		super(image);
+	}
+
+	@Override
+	public Bullet createBullet() {
+		return new Bullet(ImageCache.forClass(TowerGame.class).get("bullets/b1.png"));
+	}
+
+	@Override
+	public double getBulletSpeed() {
+		return 1;
+	}
+	
+	
+}

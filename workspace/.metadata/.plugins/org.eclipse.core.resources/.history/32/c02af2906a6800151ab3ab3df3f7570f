@@ -1,0 +1,18 @@
+package gamesrc;
+
+import java.awt.image.BufferedImage;
+
+import jgame.GObject;
+import jgame.GSprite;
+import jgame.listener.BoundaryRemovalListener;
+import jgame.Context;
+
+public class Bullet extends GSprite {
+	
+	public Bullet(BufferedImage image) {
+		super(image);
+		addListener(new BoundaryRemovalListener());
+
+	}
+
+}

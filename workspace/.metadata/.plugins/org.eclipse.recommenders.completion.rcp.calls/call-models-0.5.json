@@ -1,0 +1,23 @@
+{
+  "H:\\workspace\\Proj001\\src": {
+    "location": "H:\\workspace\\Proj001\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027H:\\workspace\\Proj001\\src\u0027. Skipped."
+  },
+  "C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar",
+    "status": "RESOLVED",
+    "error": "No call model found for \u0027C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar\u0027. Neither fingerprint \u0027c41b07d87b6d2cf484d96ef9c3115832b7a2b612\u0027 nor symbolic name \u0027jre\u0027 are known."
+  },
+  "H:\\workspace\\_JGame\\jgame-1.2.jar": {
+    "location": "H:\\workspace\\_JGame\\jgame-1.2.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027H:\\workspace\\_JGame\\jgame-1.2.jar\u0027. Neither fingerprint \u002758d4051a47f4a1ad63226d79c5232aa42a8b731e\u0027 nor symbolic name \u0027jgame-1.2\u0027 are known."
+  },
+  "H:\\workspace\\TowerGame\\src": {
+    "location": "H:\\workspace\\TowerGame\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027H:\\workspace\\TowerGame\\src\u0027. Skipped."
+  }
+}

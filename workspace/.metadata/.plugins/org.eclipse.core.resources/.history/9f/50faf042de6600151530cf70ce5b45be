@@ -1,0 +1,62 @@
+package gamesrc;
+
+import java.awt.image.BufferedImage;
+
+import jgame.GAnimatable;
+import jgame.GSprite;
+import jgame.ImageCache;
+
+public class Enemy extends GSprite implements GAnimatable {
+	
+	private int frameNumber = 0;
+	private int health;
+	
+	//TODO: ArrayList<BufferedImage> Constructor
+	
+	public Enemy(BufferedImage i) {
+		super(i);
+		health = 100;
+	}
+	
+	@Override
+	public boolean isPlaying() {
+		return true;
+	}
+	
+	@Override
+	public void nextFrame(){
+		this.setImage(ImageCache.forClass(TowerGame.class).get("trumpanimation/t" + frameNumber + ".png"));
+		frameNumber++;
+	}
+	
+	@Override
+	public void previousFrame() {
+		
+	}
+	
+	@Override
+	public void setFrameNumber(int frameNumber){
+		
+	}
+	
+	@Override
+	public void setPlaying(boolean playing){
+		
+	}
+	
+	public void takeDamage(int damage){
+		health = health-damage;
+	}
+	
+	public int getHealth() {
+		return health;
+	}
+	
+	public boolean isDead() {
+		if(health <= 0)
+			return true;
+		return false;
+	}
+	
+	
+}

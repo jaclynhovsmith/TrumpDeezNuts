@@ -1,0 +1,97 @@
+package gamesrc;
+
+import java.awt.Color;
+import java.awt.Image;
+
+import jgame.GContainer;
+import jgame.GMessage;
+import jgame.GObject;
+import jgame.ImageCache;
+import jgame.controller.MouseLocationController;
+import jgame.listener.LocalClickListener;
+import jgame.Context;
+
+public class TGLevelOneView extends GContainer {
+
+	private l1PlayArea pal1 = new l1PlayArea();
+	private MenuArea   ma   = new MenuArea();
+	private InfoArea   ia   = new InfoArea();
+	
+	private boolean settingTurret = false;
+	
+	public TGLevelOneView() {
+		setSize(1280, 720);
+		//Set Play Area
+		pal1.setAnchorTopLeft();
+		pal1.setLocation(150, 0);
+		this.add(pal1);
+		
+		//Set Menu Area
+		ma.setAnchorTopLeft();
+		ma.setLocation(0, 570);
+		ma.mySetParent(this);
+		this.add(ma);
+		
+		//Set Info Area
+		ia.setAnchorTopLeft();
+		ia.setLocation(0, 0);
+		ia.mySetParent(this);
+		ia.printParent();
+		this.add(ia);
+		
+	}
+
+	public void initializeTurret(int turretNumber) {
+		if(settingTurret){
+			return;
+		}
+		settingTurret = true;
+		//Use this when we get actual images
+		Turret t = chooseTurret(turretNumber);
+
+		//GMessage t = chooseMessage(turretNumber);
+		t.setX(-200);
+		t.setY(-200);
+		this.pal1.add(t);
+		
+		final MouseLocationController MLC = new MouseLocationController();
+		t.addController(MLC);
+		
+		final LocalClickListener DROP_LISTENER = new LocalClickListener(){
+			@Override
+			public void invoke(GObject target, Context context) {
+				target.removeController(MLC);
+				target.removeListener(this);
+				
+				settingTurret = false;
+			}
+		};
+		t.addListener(DROP_LISTENER);
+	}
+	
+	public Turret chooseTurret(int tn) {
+		tn += 1;
+		switch(tn){
+			case 1:
+				return new TurretOne(ImageCache.forClass(TowerGame.class).get("turrets/dt1.gif"), 60);
+			case 2:
+				return new TurretTwo(ImageCache.forClass(TowerGame.class).get("turrets/dt2.gif"), 60);
+			case 3:
+				return new TurretThree(ImageCache.forClass(TowerGame.class).get("turrets/dt3.gif"), 60);
+			case 4:
+				return new TurretFour(ImageCache.forClass(TowerGame.class).get("turrets/dt4.gif"), 60);
+			case 5:
+				return new TurretFive(ImageCache.forClass(TowerGame.class).get("turrets/dt5.gif"), 60);
+			default:
+				return null;
+		}
+	}
+	
+	public GMessage chooseMessage(int tn){
+		tn += 1;
+		GMessage t = new GMessage(tn + "");
+		t.setFontSize(100);
+		t.setColor(Color.PINK);
+		return t;
+	}
+}
